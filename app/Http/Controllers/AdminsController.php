@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Admin;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class UsersController extends Controller
+class AdminsController extends Controller
 {
     public function index() {
-        return User::all();
+        return Admin::all();
     }
 
     public function create(Request $request)
@@ -23,7 +23,7 @@ class UsersController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ])->validate();
 
-        return User::create([
+        return Admin::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),

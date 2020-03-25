@@ -2295,7 +2295,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /***/ }),
 
@@ -37955,7 +37954,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-sm-6" }, [
               _c("ol", { staticClass: "breadcrumb float-sm-right" }, [
                 _c("li", { staticClass: "breadcrumb-item" }, [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Home")])
+                  _c("a", { attrs: { href: "/" } }, [_vm._v("Home")])
                 ]),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
@@ -38488,7 +38487,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-sm-6" }, [
               _c("ol", { staticClass: "breadcrumb float-sm-right" }, [
                 _c("li", { staticClass: "breadcrumb-item" }, [
-                  _c("a", { attrs: { href: "/admin" } }, [_vm._v("Home")])
+                  _c("a", { attrs: { href: "/" } }, [_vm._v("Home")])
                 ]),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
@@ -54152,6 +54151,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [{
+  path: '',
+  component: _views_dashboard__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
   path: '/dashboard',
   component: _views_dashboard__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
@@ -54162,7 +54164,6 @@ var routes = [{
   component: _views_notice__WEBPACK_IMPORTED_MODULE_3__["default"]
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
-  base: '/',
   mode: 'history',
   routes: routes,
   linkActiveClass: 'active'

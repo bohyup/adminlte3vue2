@@ -20,7 +20,7 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::get('/{url}',function (){
        return view('main');
-    })->where('url','dashboard|user|notice');
+    })->where(['url' => 'dashboard|user|notice']);
 
     Route::post('/user','UsersController@create');
 });

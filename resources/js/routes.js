@@ -6,6 +6,10 @@ import Notice from './views/notice'
 
 let routes = [
     {
+        path:'',
+        component: Dashboard
+    },
+    {
         path: '/dashboard',
         component: Dashboard
     },
@@ -21,7 +25,6 @@ let routes = [
 
 
 export default new VueRouter({
-
     mode: 'history',
     routes,
     linkActiveClass: 'active'
