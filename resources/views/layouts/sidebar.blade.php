@@ -20,9 +20,9 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link tag="a" to="/user" class="nav-link">
+                    <router-link tag="a" to="/admin" class="nav-link">
                         <i class="nav-icon fas fa-glass-cheers"></i>
-                        <p>Users</p>
+                        <p>Admins</p>
                     </router-link>
                 </li>
 

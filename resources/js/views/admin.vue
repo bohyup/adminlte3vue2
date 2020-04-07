@@ -6,12 +6,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Users</h1>
+                        <h1 class="m-0 text-dark">Admins</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Users</li>
+                            <li class="breadcrumb-item active">Admins</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -47,15 +47,15 @@
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>User</th>
+                                        <th>Admin</th>
                                         <th>Email</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr v-for="user in users">
-                                        <td>{{user.id}}</td>
-                                        <td>{{user.name}}</td>
-                                        <td>{{user.email}}</td>
+                                    <tr v-for="admin in admins">
+                                        <td>{{admin.id}}</td>
+                                        <td>{{admin.name}}</td>
+                                        <td>{{admin.email}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -69,7 +69,7 @@
 
                         <div class="card card-info">
                             <div class="card-header">
-                                <h3 class="card-title">New User Form</h3>
+                                <h3 class="card-title">New Admin Form</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
@@ -102,7 +102,7 @@
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-info" :disabled="form.errors.any()">Add User</button>
+                                    <button type="submit" class="btn btn-info" :disabled="form.errors.any()">Add Admin</button>
                                 </div>
                                 <!-- /.card-footer -->
                             </form>
@@ -129,7 +129,7 @@
         data() {
 
             return {
-                users: [],
+                admins: [],
                 form: new Form({
                     'name': '',
                     'email': '',
@@ -142,16 +142,16 @@
 
 
         created() {
-            axios.get('/users')
-                .then(({data}) => this.users = data);
+            axios.get('/admin')
+                .then(({data}) => this.admins = data);
         },
 
         methods: {
             onSubmit(){
                 this.form.password_confirmation = this.form.password; // Temp for this form only.
                 this.form
-                    .post('/users')
-                    .then(user => this.users.push(user));
+                    .post('/admin')
+                    .then(admin => this.admins.push(admin));
             }
         }
     }
